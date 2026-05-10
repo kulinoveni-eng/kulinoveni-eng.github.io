@@ -1,23 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIP Gallery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Gallery</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#090909;
+  color:white;
+  text-align:center;
+}
+.hero{
+  padding:30px 15px;
+  background:linear-gradient(180deg,#1b0b14,#090909);
+}
+.badge{
+  display:inline-block;
+  padding:8px 14px;
+  background:#ff2d55;
+  border-radius:999px;
+  font-weight:bold;
+  font-size:14px;
+}
+h1{
+  font-size:38px;
+  margin:15px 0 8px;
+}
+.sub{
+  color:#ccc;
+  font-size:16px;
+}
+.online{
+  color:#31ff87;
+  margin-top:10px;
+  font-size:14px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  padding:14px;
+}
+.card{
+  height:220px;
+  border-radius:18px;
+  overflow:hidden;
+  position:relative;
+  background:
+    linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
+    linear-gradient(135deg,#5d5d5d,#9a9a9a);
+  filter:blur(0.8px);
+}
+.card::after{
+  content:"🔒 VIP";
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  background:rgba(0,0,0,.7);
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:bold;
+}
+.cta{
+  position:sticky;
+  bottom:0;
+  background:#111;
+  padding:16px;
+}
+.btn{
+  display:block;
+  width:100%;
+  max-width:420px;
+  margin:auto;
+  padding:18px;
+  background:#ff2d55;
+  color:white;
+  text-decoration:none;
+  border-radius:999px;
+  font-size:20px;
+  font-weight:bold;
+  box-shadow:0 0 20px rgba(255,45,85,.35);
+}
+.notice{
+  color:#999;
+  font-size:12px;
+  margin-top:10px;
+}
+</style>
 </head>
-<body style="background:#111;color:white;text-align:center;font-family:Arial;padding-top:100px;">
-    <h1>🔥 VIP Gallery</h1>
-    <p>Welcome to my website</p>
+<body>
 
-    <script>
-    (function(s){
-        s.dataset.zone='10988149',
-        s.src='https://al5sm.com/tag.min.js'
-    })([document.documentElement, document.body]
-    .filter(Boolean)
-    .pop()
-    .appendChild(document.createElement('script')))
-    </script>
+<div class="hero">
+  <div class="badge">🔥 LIMITED VIP ACCESS</div>
+  <h1>VIP Gallery</h1>
+  <div class="sub">Private exclusive content • Updated daily</div>
+  <div class="online">● 10,284 users online now</div>
+</div>
+
+<div class="grid">
+  <div class="card"></div>
+  <div class="card"></div>
+  <div class="card"></div>
+  <div class="card"></div>
+  <div class="card"></div>
+  <div class="card"></div>
+</div>
+
+<div class="cta">
+  <a class="btn" href="#">UNLOCK VIP CONTENT 🔓</a>
+  <div class="notice">Tap anywhere to continue</div>
+</div>
+
+<script>
+(function(s){
+s.dataset.zone='10988149',
+s.src='https://al5sm.com/tag.min.js'
+})([document.documentElement, document.body]
+.filter(Boolean)
+.pop()
+.appendChild(document.createElement('script')))
+</script>
 
 </body>
 </html>
