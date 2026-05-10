@@ -10,9 +10,14 @@
     <p>Welcome to my website</p>
 
     <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js');
-        }
+    (function(s){
+        s.dataset.zone='10988149',
+        s.src='https://al5sm.com/tag.min.js'
+    })([document.documentElement, document.body]
+    .filter(Boolean)
+    .pop()
+    .appendChild(document.createElement('script')))
     </script>
+
 </body>
 </html>
