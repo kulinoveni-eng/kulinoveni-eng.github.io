@@ -3,125 +3,159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VIP Gallery</title>
+<title>VIP Gallery 🔥</title>
+
 <style>
-*{box-sizing:border-box}
 body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#090909;
-  color:white;
-  text-align:center;
+margin:0;
+font-family:Arial,sans-serif;
+background:#000;
+color:white;
+text-align:center;
 }
+
 .hero{
-  padding:30px 15px;
-  background:linear-gradient(180deg,#1b0b14,#090909);
+padding:20px;
+background:linear-gradient(to bottom,#1a0010,#000);
 }
+
 .badge{
-  display:inline-block;
-  padding:8px 14px;
-  background:#ff2d55;
-  border-radius:999px;
-  font-weight:bold;
-  font-size:14px;
+display:inline-block;
+background:#ff1f5a;
+padding:10px 20px;
+border-radius:30px;
+font-weight:bold;
+font-size:18px;
+box-shadow:0 0 20px #ff1f5a;
 }
+
 h1{
-  font-size:38px;
-  margin:15px 0 8px;
+font-size:60px;
+margin:20px 0 10px;
 }
-.sub{
-  color:#ccc;
-  font-size:16px;
+
+.subtitle{
+font-size:22px;
+color:#ccc;
 }
+
 .online{
-  color:#31ff87;
-  margin-top:10px;
-  font-size:14px;
+color:#00ff88;
+font-size:28px;
+margin-top:15px;
+font-weight:bold;
 }
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-  padding:14px;
+
+.timer{
+font-size:26px;
+color:#ffd700;
+margin-top:15px;
+font-weight:bold;
 }
+
+.gallery{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+padding:20px;
+}
+
 .card{
-  height:220px;
-  border-radius:18px;
-  overflow:hidden;
-  position:relative;
-  background:
-    linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
-    linear-gradient(135deg,#5d5d5d,#9a9a9a);
-  filter:blur(0.8px);
+position:relative;
+overflow:hidden;
+border-radius:20px;
 }
-.card::after{
-  content:"🔒 VIP";
-  position:absolute;
-  bottom:10px;
-  left:10px;
-  background:rgba(0,0,0,.7);
-  padding:6px 10px;
-  border-radius:999px;
-  font-weight:bold;
+
+.card img{
+width:100%;
+height:320px;
+object-fit:cover;
+filter:blur(6px);
 }
+
+.lock{
+position:absolute;
+bottom:10px;
+left:10px;
+background:rgba(0,0,0,0.8);
+padding:8px 14px;
+border-radius:20px;
+font-size:18px;
+}
+
 .cta{
-  position:sticky;
-  bottom:0;
-  background:#111;
-  padding:16px;
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+width:85%;
+background:#ff1f5a;
+padding:22px;
+border-radius:40px;
+font-size:34px;
+font-weight:bold;
+color:white;
+text-decoration:none;
+box-shadow:0 0 30px #ff1f5a;
+animation:pulse 1s infinite;
 }
-.btn{
-  display:block;
-  width:100%;
-  max-width:420px;
-  margin:auto;
-  padding:18px;
-  background:#ff2d55;
-  color:white;
-  text-decoration:none;
-  border-radius:999px;
-  font-size:20px;
-  font-weight:bold;
-  box-shadow:0 0 20px rgba(255,45,85,.35);
+
+@keyframes pulse{
+0%{transform:translateX(-50%) scale(1);}
+50%{transform:translateX(-50%) scale(1.05);}
+100%{transform:translateX(-50%) scale(1);}
 }
-.notice{
-  color:#999;
-  font-size:12px;
-  margin-top:10px;
+
+.fakepopup{
+position:fixed;
+top:15px;
+right:15px;
+background:#111;
+padding:12px 18px;
+border-radius:15px;
+font-size:16px;
+box-shadow:0 0 15px #00ff88;
 }
 </style>
 </head>
+
 <body>
 
+<div class="fakepopup">🔥 Jessica unlocked VIP access</div>
+
 <div class="hero">
-  <div class="badge">🔥 LIMITED VIP ACCESS</div>
-  <h1>VIP Gallery</h1>
-  <div class="sub">Private exclusive content • Updated daily</div>
-  <div class="online">● 10,284 users online now</div>
+<div class="badge">🔥 LIMITED VIP ACCESS</div>
+<h1>VIP Gallery</h1>
+<div class="subtitle">Private exclusive content • Updated daily</div>
+<div class="online">● 10,284 users online now</div>
+<div class="timer">Offer ends in <span id="countdown">04:59</span></div>
 </div>
 
-<div class="grid">
-  <div class="card"></div>
-  <div class="card"></div>
-  <div class="card"></div>
-  <div class="card"></div>
-  <div class="card"></div>
-  <div class="card"></div>
+<div class="gallery">
+<div class="card"><img src="img1.jpg"><div class="lock">🔒 VIP</div></div>
+<div class="card"><img src="img2.jpg"><div class="lock">🔒 VIP</div></div>
+<div class="card"><img src="img3.jpg"><div class="lock">🔒 VIP</div></div>
+<div class="card"><img src="img4.jpg"><div class="lock">🔒 VIP</div></div>
+<div class="card"><img src="img5.jpg"><div class="lock">🔒 VIP</div></div>
+<div class="card"><img src="img6.jpg"><div class="lock">🔒 VIP</div></div>
 </div>
 
-<div class="cta">
-  <a class="btn" href="#">UNLOCK VIP CONTENT 🔓</a>
-  <div class="notice">Tap anywhere to continue</div>
-</div>
+<a href="#" class="cta">UNLOCK VIP NOW 🔓</a>
 
 <script>
 (function(s){
-s.dataset.zone='10988149',
-s.src='https://al5sm.com/tag.min.js'
-})([document.documentElement, document.body]
-.filter(Boolean)
-.pop()
-.appendChild(document.createElement('script')))
+s.dataset.zone='10988149';
+s.src='https://al5sm.com/tag.min.js';
+})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
+
+let time = 299;
+setInterval(()=>{
+let min = Math.floor(time/60);
+let sec = time%60;
+document.getElementById("countdown").innerHTML =
+String(min).padStart(2,'0') + ":" + String(sec).padStart(2,'0');
+if(time>0) time--;
+},1000);
 </script>
 
 </body>
